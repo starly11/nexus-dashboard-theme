@@ -1,0 +1,9 @@
+Nexus SaaS Admin Dashboard
+Version 1.0.0
+Release Date: 2026-03-26
+
+[1.0.0]
+- Initial ThemeForest release
+- Added dashboard, analytics, users, billing, reports, team, integrations, support, notifications, settings, profile, login, and signup pages
+- Centralized shared layout, charts, product config, reusable types, and mock data
+- Added ThemeForest documentation and release-prep assets
