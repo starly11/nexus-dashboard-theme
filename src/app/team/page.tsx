@@ -289,11 +289,13 @@ export default function TeamPage(): React.JSX.Element {
                   <select
                     value={inviteState.role}
                     onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
-                      if (!isTeamRole(event.target.value)) {
+                      const nextRole = event.target.value;
+
+                      if (!isTeamRole(nextRole)) {
                         return;
                       }
 
-                      setInviteState((currentState) => ({ ...currentState, role: event.target.value }));
+                      setInviteState((currentState) => ({ ...currentState, role: nextRole }));
                     }}
                     className="w-full rounded-xl bg-surface-container-lowest px-4 py-3 text-sm text-on-surface outline-none ring-1 ring-outline-variant/10 transition-all focus:ring-primary/35"
                     aria-label="Assign team role"

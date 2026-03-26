@@ -555,11 +555,13 @@ export default function UsersPage(): React.JSX.Element {
                 <select
                   value={inviteForm.role}
                   onChange={(event: React.ChangeEvent<HTMLSelectElement>) => {
-                    if (!isUserRole(event.target.value)) {
+                    const nextRole = event.target.value;
+
+                    if (!isUserRole(nextRole)) {
                       return;
                     }
 
-                    setInviteForm((currentForm) => ({ ...currentForm, role: event.target.value }));
+                    setInviteForm((currentForm) => ({ ...currentForm, role: nextRole }));
                   }}
                   className="w-full rounded-xl bg-surface-container-lowest px-4 py-3 text-sm text-on-surface outline-none ring-1 ring-transparent transition-all focus:ring-primary/35"
                   aria-label="Invitee role"
